@@ -1,21 +1,21 @@
 package main
 
 import (
-	"net/url"
-	"net/http"
 	"fmt"
 	"io/ioutil"
 	"log"
-)
+	"net/http"
+	"net/url"
 
-const port = 18888
+	"github.com/deme0607/real-world-http-samples/constants"
+)
 
 func main() {
 	values := url.Values{
 		"query": {"hello world"},
 	}
 
-	resp, err := http.Get(fmt.Sprintf("http://localhost:%d?%s", port, values.Encode()))
+	resp, err := http.Get(fmt.Sprintf("%s?%s", constants.BaseURL, values.Encode()))
 	if err != nil {
 		panic(err)
 	}

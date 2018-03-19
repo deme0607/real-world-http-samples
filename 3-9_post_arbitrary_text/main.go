@@ -1,10 +1,11 @@
 package main
 
 import (
-	"strings"
-	"net/http"
-	"github.com/deme0607/real-world-http-samples/constants"
 	"log"
+	"net/http"
+	"strings"
+
+	"github.com/deme0607/real-world-http-samples/constants"
 )
 
 func main() {

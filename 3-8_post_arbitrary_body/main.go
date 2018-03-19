@@ -1,14 +1,15 @@
 package main
 
 import (
-	"os"
-	"net/http"
 	"fmt"
-	"log"
 	"go/build"
+	"log"
+	"net/http"
+	"os"
+
+	"github.com/deme0607/real-world-http-samples/constants"
 )
 
-const port = 18888
 const filePath = "/github.com/deme0607/real-world-http-samples/3-8_post_arbitrary_body/main.go"
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
 		panic(err)
 	}
 
-	resp, err := http.Post(fmt.Sprintf("http://localhost:%d", port), "text/plain", file)
+	resp, err := http.Post(constants.BaseURL, "text/plain", file)
 	if err != nil {
 		panic(err)
 	}

@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net/http"
-	"net/http/httputil"
 	"fmt"
 	"log"
-)
+	"net/http"
+	"net/http/httputil"
 
-const port = 18888
+	"github.com/deme0607/real-world-http-samples/constants"
+)
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	dump, err := httputil.DumpRequest(r, true)
@@ -21,11 +21,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	p := fmt.Sprintf(":%d", port)
+	p := fmt.Sprintf(":%d", constants.Port)
 
 	http.HandleFunc("/", handler)
 
 	log.Println("start http listening ", p)
 	log.Println(http.ListenAndServe(p, nil))
 }
-

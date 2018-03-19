@@ -1,20 +1,19 @@
 package main
 
 import (
-	"net/url"
-	"net/http"
-	"fmt"
 	"log"
-)
+	"net/http"
+	"net/url"
 
-const port = 18888
+	"github.com/deme0607/real-world-http-samples/constants"
+)
 
 func main() {
 	values := url.Values{
 		"test": {"value"},
 	}
 
-	resp, err := http.PostForm(fmt.Sprintf("http://localhost:%d", port), values)
+	resp, err := http.PostForm(constants.BaseURL, values)
 	if err != nil {
 		panic(err)
 	}
