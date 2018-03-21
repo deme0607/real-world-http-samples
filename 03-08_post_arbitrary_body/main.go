@@ -10,7 +10,7 @@ import (
 	"github.com/deme0607/real-world-http-samples/constants"
 )
 
-const filePath = "/github.com/deme0607/real-world-http-samples/3-8_post_arbitrary_body/main.go"
+const filePath = "github.com/deme0607/real-world-http-samples/03-08_post_arbitrary_body/main.go"
 
 func main() {
 	file, err := os.Open(fmt.Sprintf("%s/src/%s", build.Default.GOPATH, filePath))
