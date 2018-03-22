@@ -13,7 +13,7 @@ import (
 	"github.com/deme0607/real-world-http-samples/constants"
 )
 
-const filePath = "github.com/deme0607/real-world-http-samples/3-10_post_multipart_form_data/photo.jpg"
+const filePath = "github.com/deme0607/real-world-http-samples/03-10_post_multipart_form_data/photo.jpg"
 
 func main() {
 	var buffer bytes.Buffer
